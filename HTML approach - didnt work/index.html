@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>RLE veriComp</title>
+	<link rel="stylesheet" href="css/styles.css" />
+	<script src="js/main.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+	<script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+	<!-- <py-env>
+		- matplotlib
+		- pandas
+		- lxml
+	</py-env> -->
+</head>
+
+<body>
+	<div class="slider-thumb"></div>
+
+	<h1>RLE Encode and Decode</h1>
+	<h2>Lütfen BMP uzantılı dosyanızı seçin:</h2>
+	<div class="slider-thumb">
+		<input type="file" id="dosya" accept=".bmp">
+		<button type="button" onclick="yukle()">Yükle</button>
+	</div>
+	<img id="resim" style="width: 200px; display:none">
+	<canvas id="myCanvas" width="200" height="200" style="display:none">
+		Your browser does not support the HTML5 canvas tag.</canvas>
+	<h1 id="encode" style="display: none;">Encode</h1>
+	<!-- <div class="container-md" id="test-plot">
+		<div class="pulse">
+			<p style='font-family: monospace sans-serif;'><big><big><big><big>PyScript loading and
+								initializing...</big></big></big></big></p>
+		</div>
+		<py-script>
+			import matplotlib.pyplot as plt
+			import numpy as np
+			integers = np.random.randint(0,100,100)
+			fig1,ax1 = plt.subplots(1,1,dpi=150,figsize=(5,2))
+			ax1.hist(integers,bins=20,edgecolor='k',color='blue')
+			ax1.set_title("Histogram of random integers",fontsize=11)
+			pyscript.write('test-plot',fig1)
+		</py-script>
+	</div> -->
+
+</body>
+
+</html>

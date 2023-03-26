@@ -1,0 +1,95 @@
+h1,
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+input[type="file"],
+input[type="button"],
+button {
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 8px;
+}
+
+input[type="file"]:hover,
+button:hover {
+    background-color: #444;
+}
+
+/* Arka plan içün */
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider-thumb::before {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px;
+    margin-left: -400px;
+    content: "";
+
+    width: 800px;
+    height: 800px;
+
+    background: #17141d;
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+}
+
+@keyframes sliderShape {
+    0%,
+    100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}
+
+.centered {
+    position: fixed;
+    /* or absolute */
+    top: 50%;
+    left: 50%;
+}
